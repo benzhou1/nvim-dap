@@ -256,6 +256,7 @@ local function run_in_terminal(lsession, request)
   if path and path ~= "" then
     vim.bo[terminal_buf].path = path
   end
+  vim.bo[terminal_buf].filetype = "dap-term"
 
   local jobid
   vim.api.nvim_buf_call(terminal_buf, function()
