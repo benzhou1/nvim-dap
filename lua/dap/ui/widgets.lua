@@ -288,6 +288,10 @@ M.frames = {
           end
         },
       }
+      -- Add index to frames
+      for i, f in ipairs(frames) do
+        f.i = i
+      end
       local render_frame = require('dap.entity').frames.render_item
       layer.render(frames, render_frame, context)
     end)
